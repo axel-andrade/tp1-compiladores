@@ -4,6 +4,7 @@
 type token = 
   | WHILE
   | VAR
+  | TYPE
   | TIMES
   | THEN
   | STRING of (string)
@@ -27,6 +28,7 @@ type token =
   | ID of (Symbol.symbol)
   | GT
   | GE
+  | FUNCTION
   | EQ
   | EOF
   | END
@@ -38,3 +40,11 @@ type token =
   | BREAK
   | ASSIGN
   | AND
+
+(* This exception is raised by the monolithic API functions. *)
+
+exception Error
+
+(* The monolithic API. *)
+
+val program: (Lexing.lexbuf -> token) -> Lexing.lexbuf -> (Absyn.lexp)

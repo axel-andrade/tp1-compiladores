@@ -1,4 +1,3 @@
-(* symbol: a type to efficiently represent identifiers *)
 
 (* representing a symbol *)
 type symbol = string * int

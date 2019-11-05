@@ -1,0 +1,65 @@
+type token =
+    WHILE
+  | VAR
+  | TYPE
+  | TIMES
+  | THEN
+  | STRING of string
+  | SEMI
+  | RPAREN
+  | REAL of float
+  | POW
+  | PLUS
+  | OR
+  | NE
+  | MOD
+  | MINUS
+  | LT
+  | LPAREN
+  | LOGIC of bool
+  | LET
+  | LE
+  | INTEGER of int
+  | IN
+  | IF
+  | ID of Symbol.symbol
+  | GT
+  | GE
+  | FUNCTION
+  | EQ
+  | EOF
+  | END
+  | ELSE
+  | DO
+  | DIV
+  | COMMA
+  | COLON
+  | BREAK
+  | ASSIGN
+  | AND
+val menhir_begin_marker : int
+val xv_vardec : Absyn.ldec
+val xv_var : Absyn.lvar
+val xv_typedec : Absyn.typedec Location.loc
+val xv_typeCons : Absyn.ltypecons
+val xv_separated_nonempty_list_SEMI_exp_ : Absyn.lexp list
+val xv_separated_nonempty_list_COMMA_parameter_ :
+  Absyn.parameter Location.loc list
+val xv_separated_nonempty_list_COMMA_exp_ : Absyn.lexp list
+val xv_separated_list_SEMI_exp_ : Absyn.lexp list
+val xv_separated_list_COMMA_parameter_ : Absyn.parameter Location.loc list
+val xv_separated_list_COMMA_exp_ : Absyn.lexp list
+val xv_program : Absyn.lexp
+val xv_parameter : Absyn.parameter Location.loc
+val xv_nonempty_list_typedec_ : Absyn.typedec Location.loc list
+val xv_nonempty_list_funcdec_ : Absyn.fundec Location.loc list
+val xv_loption_separated_nonempty_list_SEMI_exp__ : Absyn.lexp list
+val xv_loption_separated_nonempty_list_COMMA_parameter__ :
+  Absyn.parameter Location.loc list
+val xv_loption_separated_nonempty_list_COMMA_exp__ : Absyn.lexp list
+val xv_list_dec_ : Absyn.ldec list
+val xv_funcdec : Absyn.fundec Location.loc
+val xv_exp : Absyn.lexp
+val xv_decs : Absyn.ldec list
+val xv_dec : Absyn.ldec
+val menhir_end_marker : int

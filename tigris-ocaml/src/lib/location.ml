@@ -1,4 +1,3 @@
-(* location in the source code *)
 
 module L = Lexing
 
